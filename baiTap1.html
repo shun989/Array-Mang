@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập mảng</title>
+</head>
+<body>
+<script>
+
+    //bài 1
+   // let myColors = ["Red", "Green", "White", "Black"];
+   // let myColor = myColors.join();
+   // document.write(myColor);
+
+    //bai 2
+   /* let num = window.prompt();
+    let newNum = num.toString();
+    let result = [newNum[0]];
+
+    for (let i = 1; i < newNum.length; i++) {
+        if (newNum[i - 1] % 2 === 0 && newNum[i] % 2 === 0) {
+            result.push('-', newNum[i]);
+        } else {
+            result.push(newNum[i]);
+        }
+    }
+    document.write(result.join('')); */
+
+  //bai 3
+    /*let str = window.prompt();
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    const result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.includes(str[x]))
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.includes(str[x]))
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join('')); */
+
+    let str = window.prompt();
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toLowerCase());
+           }
+        else if(LOWER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toUpperCase());
+            }
+        else {
+            result.push(str[x]);
+             }
+    }
+    document.write(result.join(''));
+
+
+</script>
+</body>
+</html>
