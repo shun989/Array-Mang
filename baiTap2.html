@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<!--<body>
+<form>
+    <input type="text" id="tudien" value=" ">
+    <input type="submit"  value="Tra cứu"><br/>
+    <span id="result"></span>
+
+</form>
+<script>
+    let a = document.getElementById('tudien').value;
+    let UPPER = ["Chicken", "Pig", "Cat", "Dog", "Apple", "Banana"];
+    let LOWER = ["Conga", "Conheo", "Conmeo", "Concho", "Quatao", "Quachuoi"];
+    let result = '';
+    for (let x = 0; x < a.length; x++) {
+
+
+      for (let j = 1; j <= a.length; j++){
+        if(a(UPPER.slice((x),(j)) && x === 0 && j === 1)) {
+           // result = UPPER.slice(str(x).toLowerCase());
+            result = LOWER.slice((x),(j));
+            x++;
+            j++;
+          }
+        else if(a(LOWER.slice((x),(j)) && x === 0 && j === 1 )){
+          //  result = LOWER.slice(str(x).toUpperCase());
+            result = a(UPPER.slice((x),(j)));
+            x++;
+            j++;
+          }
+
+        else {
+            document.write('Không tồn tại!')
+          }
+      }
+
+    }document.getElementById( a +' nghĩa là '+ result);
+ </script>
+</body>-->
+<body>
+<label for="inputWord">Hãy nhập từ cần tìm</label>
+<input type="text" id="inputWord">
+<button onclick="timkiem()" type="button">Seach</button>
+<input type="text" id="outputWord">
+
+<script>
+    let tiengAnh = ['duck', 'class', 'hot'];
+    let tiengViet = ['vịt', 'lớp', 'nóng'];
+    function timkiem() {
+        let input = document.getElementById('inputWord').value;
+        for (let word in tiengAnh) {
+            if (tiengAnh[word] == input) {
+                document.getElementById('outputWord').value = tiengViet[word];
+                return ;
+            }
+        }
+        alert('Từ điển không chứa từ này!');
+    }
+</script>
+</body>
+</html>
